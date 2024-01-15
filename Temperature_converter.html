@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="conv_styl.css">
+</head>
+<body>
+
+<div id="converter">
+  <h2>Temperature Converter</h2>
+  <label for="inputTemperature">Enter Temperature:</label>
+  <div class="input-group">
+    <input type="number" id="inputTemperature" placeholder="Enter temperature" step="any" required>
+    <div class="input-group-append">
+      <span class="si-unit" id="siUnit">°C</span>
+    </div>
+  </div>
+  
+  <label for="unit">Select Unit:</label>
+  <select id="unit" onchange="updateSiUnit()">
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="kelvin">Kelvin</option>
+  </select>
+
+  <button onclick="convertTemperature()">Convert</button>
+
+  <p id="result"></p>
+</div>
+
+<script src="working.js"></script>
+</body>
+</html>
